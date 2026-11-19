@@ -16,8 +16,7 @@
   --color-sage-dark: #4C6150;
   --color-accent: #C57550;
   --color-grid: #D8D8CC;
-  --color-margin-red: rgba(217, 119, 104, 0.4);
-  --color-margin-sage: rgba(105, 129, 109, 0.3);
+  --color-margin-red: rgba(217, 119, 104, 0.45);
 }
 
 @layer base {
@@ -41,6 +40,7 @@
     min-width: 320px;
   }
 
+  /* Universal cursor-pointer for all interactive elements */
   button, 
   [role="button"], 
   a, 
@@ -57,8 +57,8 @@
 
   /* Bespoke Notebook Scrollbar */
   ::-webkit-scrollbar {
-    width: 7px;
-    height: 7px;
+    width: 6px;
+    height: 6px;
   }
 
   ::-webkit-scrollbar-track {
@@ -66,7 +66,7 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #B9C4BC;
+    background: #BAC5BD;
     border-radius: 4px;
     border: 2px solid #EFECE1;
   }
@@ -76,29 +76,21 @@
   }
 }
 
-/* Subtle Bespoke Paper Noise Texture */
-.paper-grain {
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.025'/%3E%3C/svg%3E");
-}
-
-/* Graph paper texture patterns */
-.bg-notebook-grid {
+/* AUTHENTIC PLAIN HORIZONTAL LINED NOTEBOOK PAPER (Deeper, defined lines matching reference) */
+.bg-notebook-grid,
+.bg-notebook-lined {
   background-color: var(--color-paper);
-  background-image: 
-    linear-gradient(to right, rgba(216, 216, 204, 0.4) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(216, 216, 204, 0.4) 1px, transparent 1px);
-  background-size: 24px 24px;
+  background-image: linear-gradient(to bottom, rgba(182, 182, 165, 0.65) 1.2px, transparent 1.2px);
+  background-size: 100% 34px;
 }
 
-.bg-notebook-grid-dense {
+.bg-notebook-lined-dense {
   background-color: var(--color-paper-light);
-  background-image: 
-    linear-gradient(to right, rgba(216, 216, 204, 0.5) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(216, 216, 204, 0.5) 1px, transparent 1px);
-  background-size: 16px 16px;
+  background-image: linear-gradient(to bottom, rgba(182, 182, 165, 0.7) 1.2px, transparent 1.2px);
+  background-size: 100% 28px;
 }
 
-/* Notebook Ruled Margin Guide (authentic dual red line) */
+/* Notebook Ruled Left Margin Guide (authentic dual red line like lined notebooks) */
 .notebook-margin-guide {
   position: absolute;
   top: 0;
@@ -127,7 +119,7 @@
   }
 }
 
-/* Authentic Paper Stamp effect */
+/* Authentic Paper Stamp */
 .paper-stamp {
   display: inline-flex;
   align-items: center;
@@ -139,45 +131,23 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   border: 1.5px dashed var(--color-sage-dark);
-  border-radius: 3px;
+  border-radius: 4px;
   background-color: rgba(221, 229, 222, 0.6);
   color: #26382F;
-  transform: rotate(-1deg);
-  box-shadow: inset 0 0 0 1px rgba(105, 129, 109, 0.1);
 }
 
 .paper-stamp-accent {
   border-color: var(--color-accent);
   background-color: rgba(247, 231, 222, 0.65);
   color: #9C4E2D;
-  transform: rotate(0.8deg);
 }
 
-.paper-stamp-verified {
-  border-color: #385040;
-  background-color: rgba(105, 129, 109, 0.2);
-  color: #1F2E26;
-  transform: rotate(-0.5deg);
-}
-
-/* Washi Tape Accent */
-.washi-tape-strip {
-  width: 90px;
-  height: 18px;
-  background: rgba(222, 218, 198, 0.75);
-  box-shadow: 0 1px 3px rgba(38, 56, 47, 0.08);
-  backdrop-filter: blur(1px);
-  border-left: 2px dashed rgba(180, 175, 155, 0.6);
-  border-right: 2px dashed rgba(180, 175, 155, 0.6);
-  transform: rotate(-1.5deg);
-}
-
-/* Bespoke Docket Card */
+/* Clean, Spacious Docket Card */
 .docket-card {
   position: relative;
   background-color: var(--color-paper-light);
   border: 1px solid var(--color-grid);
-  border-radius: 6px;
+  border-radius: 12px;
   box-shadow: 0 2px 8px rgba(38, 56, 47, 0.04), 0 1px 2px rgba(38, 56, 47, 0.03);
   transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.28s ease;
 }
@@ -192,20 +162,6 @@
 .blueprint-box {
   background-color: #F8FAF6;
   border: 1px dashed var(--color-sage);
-  border-radius: 6px;
+  border-radius: 12px;
   position: relative;
-}
-
-.blueprint-box::before {
-  content: 'ARCH-DIAGRAM // SYS-SPEC';
-  position: absolute;
-  top: -9px;
-  left: 14px;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.62rem;
-  letter-spacing: 0.1em;
-  background-color: #F8FAF6;
-  padding: 0 6px;
-  color: var(--color-sage-dark);
-  font-weight: 700;
 }

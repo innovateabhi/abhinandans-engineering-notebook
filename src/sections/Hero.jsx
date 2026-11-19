@@ -12,7 +12,7 @@ export function Hero() {
   };
 
   return (
-    <section id="intro" className="relative pt-20 sm:pt-28 lg:pt-32 pb-16 lg:pb-24 overflow-hidden">
+    <section id="intro" className="relative pt-28 sm:pt-36 lg:pt-40 pb-16 lg:pb-24 overflow-hidden">
       {/* Decorative notebook ruler margin line (desktop only) */}
       <div className="notebook-margin-guide hidden lg:block" />
 

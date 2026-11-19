@@ -45,7 +45,7 @@ export function ProjectDetail() {
   const cs = project.caseStudy;
 
   return (
-    <article className="pt-20 sm:pt-28 pb-20 relative">
+    <article className="pt-28 sm:pt-36 lg:pt-40 pb-24 relative bg-notebook-lined min-h-screen">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb & Navigation Bar */}
         <div className="flex flex-wrap items-center justify-between gap-2 pb-3 mb-6 sm:mb-8 border-b border-grid text-xs font-mono text-ink-muted">
@@ -153,30 +153,46 @@ export function ProjectDetail() {
           </section>
 
           {/* Section: Meaningful System Architecture Diagram */}
-          <section className="space-y-3.5">
-            <div className="flex flex-wrap items-center justify-between gap-2 pb-1 border-b border-grid text-xs font-mono text-ink-muted uppercase tracking-wider">
+          <section className="space-y-6 sm:space-y-7 pt-4">
+            <div className="flex flex-wrap items-center justify-between gap-3 pb-3 border-b border-grid text-xs font-mono text-ink-muted uppercase tracking-wider">
               <div className="flex items-center gap-2">
-                <span className="w-2 h-2 bg-sage-dark rounded-xs"></span>
-                <span className="font-bold">02 // System Architecture &amp; Data Flow</span>
+                <span className="w-2.5 h-2.5 bg-sage-dark rounded-xs"></span>
+                <span className="font-bold text-xs sm:text-sm text-ink">02 // System Architecture &amp; Data Flow</span>
               </div>
-              <span className="text-ink-faint text-[10px]">ILLUSTRATIVE ENGINEERING SPEC</span>
+              <span className="paper-stamp text-[10px]">ILLUSTRATIVE ENGINEERING SPEC</span>
             </div>
 
-            <p className="text-xs sm:text-sm font-sans text-ink-muted leading-relaxed">
+            <p className="text-sm sm:text-base font-sans text-ink-muted leading-relaxed max-w-3xl">
               {cs.systemArchitecture.description}
             </p>
 
-            {/* Architecture SVG Diagram */}
-            <ArchitectureDiagram slug={project.slug} title={project.title} />
+            {/* Architecture SVG Diagram with Proper Spacing */}
+            <div className="pt-1">
+              <ArchitectureDiagram slug={project.slug} title={project.title} />
+            </div>
 
-            {/* Architectural Components Breakdown */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
-              {cs.systemArchitecture.components.map((comp, idx) => (
-                <div key={idx} className="p-3.5 rounded bg-paper-light border border-grid text-xs font-mono shadow-xs">
-                  <div className="font-bold text-ink text-xs">{comp.name}</div>
-                  <div className="text-ink-muted mt-1 font-sans text-xs leading-relaxed">{comp.role}</div>
-                </div>
-              ))}
+            {/* Architectural Components Breakdown with Proper Spacing */}
+            <div className="pt-6 sm:pt-8">
+              <div className="text-xs font-mono font-bold uppercase text-ink-muted tracking-wider mb-4 flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-accent"></span>
+                <span>System Components Specification</span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {cs.systemArchitecture.components.map((comp, idx) => (
+                  <div
+                    key={idx}
+                    className="p-4 sm:p-5 rounded-xl bg-paper-light border border-grid shadow-xs space-y-1.5 hover:border-sage/50 transition-colors"
+                  >
+                    <div className="font-mono text-xs sm:text-sm font-bold text-ink flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0"></span>
+                      <span>{comp.name}</span>
+                    </div>
+                    <div className="text-ink-muted font-sans text-xs sm:text-sm leading-relaxed pl-3.5">
+                      {comp.role}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </section>
 
