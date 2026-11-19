@@ -69,21 +69,16 @@ export function NotebookFooter() {
             </div>
           </div>
 
-          {/* Col 3: Colophon & Back to top */}
-          <div className="md:col-span-3 flex flex-col items-start md:items-end justify-between space-y-4">
+          {/* Col 3: Back to top */}
+          <div className="md:col-span-3 flex flex-col items-start md:items-end justify-center">
             <button
               onClick={scrollToTop}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded border border-grid hover:border-sage bg-paper text-xs font-mono text-ink-muted hover:text-ink transition-all shadow-xs"
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg border border-grid hover:border-sage bg-paper text-xs font-mono text-ink-muted hover:text-ink transition-all shadow-xs cursor-pointer"
               aria-label="Back to top of notebook"
             >
               <span>Top of Journal</span>
               <ArrowUp className="w-3.5 h-3.5" />
             </button>
-
-            <div className="text-[10px] sm:text-[11px] font-mono text-ink-faint md:text-right space-y-0.5">
-              <div>DESIGN TOKENS // FRAUNCES + DM SANS</div>
-              <div>COMPILED FOR VERCEL &amp; STATIC CLOUD</div>
-            </div>
           </div>
         </div>
 
