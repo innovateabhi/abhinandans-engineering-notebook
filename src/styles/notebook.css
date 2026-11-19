@@ -1,0 +1,110 @@
+/* Notebook styling details: tabs, spiral ring holes, index marks */
+
+/* Notebook Binder Spiral Rings (Left edge on desktop) */
+.spiral-binder {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0.75rem;
+  width: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  pointer-events: none;
+  z-index: 20;
+}
+
+.spiral-ring {
+  width: 16px;
+  height: 8px;
+  border-radius: 9999px;
+  background: linear-gradient(to right, #8A988D, #B4C0B7, #7B8A7E);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.25), 0 2px 3px rgba(38, 56, 47, 0.15);
+  margin: 10px 0;
+}
+
+/* Handwritten notes */
+.handwritten {
+  font-family: 'Caveat', cursive;
+  color: var(--color-accent);
+  line-height: 1.25;
+}
+
+.handwritten-sage {
+  font-family: 'Caveat', cursive;
+  color: var(--color-sage-dark);
+  line-height: 1.25;
+}
+
+/* Notebook Chapter Heading Tab */
+.chapter-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+  border-bottom: 1.5px solid var(--color-accent);
+  padding-bottom: 0.25rem;
+}
+
+/* Technical Specification Tag */
+.tech-spec-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  background-color: var(--color-paper-secondary);
+  border: 1px solid var(--color-grid);
+  color: var(--color-ink);
+  transition: all 0.2s ease;
+}
+
+.tech-spec-tag:hover {
+  border-color: var(--color-sage);
+  background-color: #E2E8D8;
+}
+
+/* Docket Paper Card */
+.docket-card {
+  position: relative;
+  background-color: var(--color-paper-light);
+  border: 1px solid var(--color-grid);
+  border-radius: 6px;
+  box-shadow: 0 4px 14px rgba(38, 56, 47, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.docket-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-sage);
+  box-shadow: 0 12px 24px rgba(38, 56, 47, 0.09);
+}
+
+/* Blueprint / System Architecture Box */
+.blueprint-box {
+  background-color: #F8FAF6;
+  border: 1px dashed var(--color-sage);
+  border-radius: 6px;
+  position: relative;
+}
+
+.blueprint-box::before {
+  content: 'ARCH-DIAGRAM // SYS-SPEC';
+  position: absolute;
+  top: -9px;
+  left: 14px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  background-color: #F8FAF6;
+  padding: 0 6px;
+  color: var(--color-sage-dark);
+  font-weight: 600;
+}

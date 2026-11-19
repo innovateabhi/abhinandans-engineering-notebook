@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="14" fill="#F6F3E9"/>
+  <rect x="2" y="2" width="60" height="60" rx="12" fill="none" stroke="#69816D" stroke-width="2"/>
+  <!-- Notebook Margin Line -->
+  <line x1="16" y1="2" x2="16" y2="62" stroke="#C57550" stroke-width="1.5" stroke-dasharray="3 2" opacity="0.8"/>
+  <!-- Horizontal ruled lines -->
+  <line x1="16" y1="20" x2="60" y2="20" stroke="#D8D8CC" stroke-width="1"/>
+  <line x1="16" y1="32" x2="60" y2="32" stroke="#D8D8CC" stroke-width="1"/>
+  <line x1="16" y1="44" x2="60" y2="44" stroke="#D8D8CC" stroke-width="1"/>
+  <!-- Monogram AR -->
+  <text x="36" y="38" font-family="'JetBrains Mono', monospace" font-size="20" font-weight="700" fill="#26382F" text-anchor="middle">AR</text>
+  <!-- Technical corner crosshair -->
+  <circle cx="52" cy="12" r="3" fill="none" stroke="#69816D" stroke-width="1"/>
+  <line x1="52" y1="7" x2="52" y2="17" stroke="#69816D" stroke-width="0.8"/>
+  <line x1="47" y1="12" x2="57" y2="12" stroke="#69816D" stroke-width="0.8"/>
+</svg>

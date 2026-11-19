@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-paper: #F6F3E9;
+  --color-paper-light: #FCFAF4;
+  --color-paper-warm: #F1EDE0;
+  --color-paper-secondary: #E9ECDD;
+  --color-paper-dark: #E2DEC9;
+  --color-ink: #26382F;
+  --color-ink-light: #3D5246;
+  --color-ink-muted: #526354;
+  --color-sage: #69816D;
+  --color-sage-light: #8FA593;
+  --color-sage-dark: #4C6150;
+  --color-accent: #C57550;
+  --color-grid: #D8D8CC;
+  --color-margin-red: rgba(217, 119, 104, 0.45);
+  --color-margin-sage: rgba(105, 129, 109, 0.35);
+}
+
+@layer base {
+  html {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  body {
+    overflow-x: hidden;
+    position: relative;
+    background-color: var(--color-paper);
+  }
+
+  ::selection {
+    background-color: rgba(197, 117, 80, 0.25);
+    color: #26382F;
+  }
+
+  /* Custom scrollbar matching notebook theme */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #F1EDE0;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #A6B4A8;
+    border-radius: 4px;
+    border: 2px solid #F1EDE0;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #69816D;
+  }
+}
+
+/* Notebook paper texture patterns */
+.bg-notebook-grid {
+  background-color: var(--color-paper);
+  background-image: 
+    linear-gradient(to right, rgba(216, 216, 204, 0.35) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(216, 216, 204, 0.35) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.bg-notebook-grid-dense {
+  background-color: var(--color-paper);
+  background-image: 
+    linear-gradient(to right, rgba(216, 216, 204, 0.5) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(216, 216, 204, 0.5) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.bg-notebook-isometric {
+  background-color: var(--color-paper-light);
+  background-image: 
+    radial-gradient(circle, rgba(105, 129, 109, 0.25) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Notebook Ruled Line and Margins */
+.notebook-page {
+  position: relative;
+  background-color: var(--color-paper);
+}
+
+.notebook-margin-guide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 3rem;
+  width: 1px;
+  background-color: var(--color-margin-red);
+  pointer-events: none;
+  z-index: 1;
+}
+
+@media (min-width: 1024px) {
+  .notebook-margin-guide {
+    left: 4.5rem;
+  }
+}
+
+/* Perforated paper border effect */
+.perforated-edge-top {
+  background-image: radial-gradient(circle at 10px 0, transparent 6px, #FCFAF4 6px);
+  background-size: 20px 10px;
+  background-repeat: repeat-x;
+}
+
+.perforated-edge-left {
+  background-image: radial-gradient(circle at 0 12px, transparent 5px, #F6F3E9 5px);
+  background-size: 10px 24px;
+  background-repeat: repeat-y;
+}
+
+/* Paper Stamp effect */
+.paper-stamp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.625rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1.5px dashed var(--color-sage);
+  border-radius: 4px;
+  background-color: rgba(221, 229, 222, 0.5);
+  color: var(--color-ink);
+  transform: rotate(-1deg);
+}
+
+.paper-stamp-accent {
+  border-color: var(--color-accent);
+  background-color: rgba(247, 231, 222, 0.6);
+  color: #A65A37;
+  transform: rotate(1deg);
+}
+
+.paper-stamp-verified {
+  border-color: #4C6150;
+  background-color: rgba(105, 129, 109, 0.15);
+  color: #26382F;
+}
+
+/* Washi Tape effect */
+.washi-tape {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-1deg);
+  width: 110px;
+  height: 22px;
+  background: rgba(220, 215, 195, 0.7);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(1px);
+  border-left: 2px dashed rgba(180, 175, 155, 0.5);
+  border-right: 2px dashed rgba(180, 175, 155, 0.5);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.washi-tape-sage {
+  background: rgba(169, 192, 173, 0.65);
+}
+
+.washi-tape-accent {
+  background: rgba(225, 175, 150, 0.6);
+}
