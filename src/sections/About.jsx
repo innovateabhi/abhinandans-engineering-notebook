@@ -15,16 +15,16 @@ export function About() {
         />
 
         {/* Editorial Layout: Story & Systems Philosophy */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
           {/* Main Story Narrative */}
-          <div className="lg:col-span-7 space-y-6">
-            <div className="notebook-ruled-sheet p-6 sm:p-8 lg:p-9 relative overflow-hidden">
+          <div className="lg:col-span-7 space-y-7">
+            <div className="notebook-ruled-sheet p-6 sm:p-8 lg:p-9 relative">
               {/* Notebook Entry Docket Header */}
               <div className="flex flex-wrap items-center justify-between gap-2 pb-3 mb-5 border-b border-grid text-xs font-mono text-ink-muted">
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-xs bg-accent"></span>
                   <span className="font-bold text-ink uppercase tracking-wider text-xs">
-                    ENTRY 02 // PERSONAL ARCHIVE &amp; SYSTEMS INQUIRY
+                    ENTRY 02 // PERSONAL ARCHIVE &amp; INQUIRY
                   </span>
                 </div>
                 <span className="paper-stamp text-[10px]">DEHRADUN // 2026</span>
@@ -36,40 +36,36 @@ export function About() {
               </p>
 
               {/* Exact Line-by-Line Notebook Ruled Text */}
-              <div className="notebook-ruled-content text-ink-muted font-sans">
+              <div className="notebook-ruled-content text-ink font-sans">
                 <p>
-                  I'm currently pursuing my B.Tech in Computer Science &amp; Engineering at Dev Bhoomi Uttarakhand University, Dehradun (Class of 2028). My interest in computing extends well beyond writing frontend code or copying templates — I am driven by understanding how entire systems work together: how HTTP requests traverse reverse proxies, how Linux kernels expose hardware telemetry through virtual filesystems, and how cloud infrastructure scales predictably.
+                  I am a Computer Science undergraduate at Dev Bhoomi Uttarakhand University (Class of 2028). Driven by first-principles curiosity, I look past surface frameworks to examine how real systems operate under the hood: how HTTP requests traverse reverse proxies, how Linux kernels expose telemetry through virtual filesystems, and how cloud infrastructure scales predictably.
                 </p>
 
                 <p>
-                  Alongside my academic studies, I completed an intensive certified 40-hour technical internship at Webel (West Bengal Electronics Industry Development Corporation Limited) in Kolkata, where I developed a Linux system monitoring web application and gained hands-on expertise with server deployment, systemd, and firewall configurations.
-                </p>
-
-                <p>
-                  To apply these principles directly to real-world software, I founded <strong>Softrenix Technologies</strong>. Through this initiative, I build custom software prototypes, multi-tenant SaaS architectures, and automated business workflows. Every project in this notebook represents a deliberate engineering inquiry: exploring cost intelligence in AWS, managing high-throughput transactions in restaurant POS systems, or designing event-driven automation pipelines.
+                  Through a certified industrial internship at Webel (Kolkata) and building software prototypes at <strong>Softrenix Technologies</strong>, I design full-stack SaaS systems, Linux telemetry daemons, and cloud automation workflows. Each entry in this notebook represents a deliberate, handcrafted engineering inquiry.
                 </p>
               </div>
             </div>
 
-            {/* Philosophy Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
-              <div className="p-4 rounded bg-paper-warm/60 border border-grid">
-                <div className="flex items-center gap-2 text-ink font-mono text-xs font-bold mb-1">
+            {/* Philosophy Cards with Proper Spacing */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="p-5 rounded-xl bg-paper-light border border-grid shadow-xs space-y-2">
+                <div className="flex items-center gap-2 text-ink font-mono text-xs font-bold">
                   <Compass className="w-4 h-4 text-accent" />
                   <span>First-Principles Engineering</span>
                 </div>
-                <p className="text-xs text-ink-muted leading-normal">
-                  Believing that reliable full-stack engineering begins with strong fundamentals: memory, network protocols, database indices, and system architecture.
+                <p className="text-xs text-ink-muted leading-relaxed font-sans">
+                  Building with deep appreciation for systems fundamentals: memory, network protocols, database indexing, and explicit boundaries.
                 </p>
               </div>
 
-              <div className="p-4 rounded bg-paper-warm/60 border border-grid">
-                <div className="flex items-center gap-2 text-ink font-mono text-xs font-bold mb-1">
+              <div className="p-5 rounded-xl bg-paper-light border border-grid shadow-xs space-y-2">
+                <div className="flex items-center gap-2 text-ink font-mono text-xs font-bold">
                   <Server className="w-4 h-4 text-sage-dark" />
                   <span>Pragmatic Infrastructure</span>
                 </div>
-                <p className="text-xs text-ink-muted leading-normal">
-                  Focusing on reproducible deployments, least-privilege cloud IAM policies, lightweight Linux daemons, and clear system boundary definitions.
+                <p className="text-xs text-ink-muted leading-relaxed font-sans">
+                  Focusing on reproducible cloud deployments, least-privilege IAM policies, lightweight Linux daemons, and reliable automation.
                 </p>
               </div>
             </div>
@@ -77,7 +73,7 @@ export function About() {
 
           {/* Right Column: Engineering Anatomy Notebook Sheet */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="docket-card p-6 bg-paper-light border border-grid-dark rounded-md relative shadow-paper">
+            <div className="docket-card p-6 sm:p-7 bg-paper-light border border-grid-dark rounded-xl relative shadow-paper">
               {/* Notebook Header */}
               <div className="flex items-center justify-between pb-3 mb-4 border-b border-grid text-xs font-mono text-ink-muted">
                 <span className="font-bold text-sage-dark">SYSTEMS FOCUS MATRIX</span>
@@ -86,35 +82,35 @@ export function About() {
 
               {/* Engineering Interests List */}
               <div className="space-y-3 font-mono text-xs">
-                <div className="p-3 rounded bg-paper-secondary border border-grid flex items-start gap-3">
+                <div className="p-3.5 rounded-lg bg-paper border border-grid flex items-start gap-3">
                   <Layers className="w-4 h-4 text-accent mt-0.5 shrink-0" />
                   <div>
                     <div className="font-bold text-ink">Full-Stack Application Design</div>
-                    <div className="text-[11px] text-ink-muted mt-0.5">Decoupled React interfaces communicating with structured Python/FastAPI backend APIs and relational models.</div>
+                    <div className="text-[11px] text-ink-muted mt-0.5 leading-snug">Decoupled React interfaces with structured Python/FastAPI backend APIs.</div>
                   </div>
                 </div>
 
-                <div className="p-3 rounded bg-paper-secondary border border-grid flex items-start gap-3">
+                <div className="p-3.5 rounded-lg bg-paper border border-grid flex items-start gap-3">
                   <Cpu className="w-4 h-4 text-sage-dark mt-0.5 shrink-0" />
                   <div>
                     <div className="font-bold text-ink">Cloud &amp; FinOps (AWS)</div>
-                    <div className="text-[11px] text-ink-muted mt-0.5">Automating resource discovery, tracking CloudWatch telemetry, and analyzing idle infrastructure overhead.</div>
+                    <div className="text-[11px] text-ink-muted mt-0.5 leading-snug">Automating resource discovery, CloudWatch telemetry, and idle cost intelligence.</div>
                   </div>
                 </div>
 
-                <div className="p-3 rounded bg-paper-secondary border border-grid flex items-start gap-3">
+                <div className="p-3.5 rounded-lg bg-paper border border-grid flex items-start gap-3">
                   <Terminal className="w-4 h-4 text-accent mt-0.5 shrink-0" />
                   <div>
                     <div className="font-bold text-ink">Linux Systems &amp; Observability</div>
-                    <div className="text-[11px] text-ink-muted mt-0.5">Reading `/proc`, tuning Nginx reverse proxies, enforcing UFW security, and managing systemd services.</div>
+                    <div className="text-[11px] text-ink-muted mt-0.5 leading-snug">Parsing `/proc` filesystems, Nginx reverse proxy tuning, and systemd units.</div>
                   </div>
                 </div>
 
-                <div className="p-3 rounded bg-paper-secondary border border-grid flex items-start gap-3">
+                <div className="p-3.5 rounded-lg bg-paper border border-grid flex items-start gap-3">
                   <BookOpen className="w-4 h-4 text-sage-dark mt-0.5 shrink-0" />
                   <div>
                     <div className="font-bold text-ink">Business Process Automation</div>
-                    <div className="text-[11px] text-ink-muted mt-0.5">Event-driven orchestration using n8n, secure HMAC webhook signatures, and data synchronization.</div>
+                    <div className="text-[11px] text-ink-muted mt-0.5 leading-snug">Event-driven orchestration using n8n and secure HMAC webhook verification.</div>
                   </div>
                 </div>
               </div>
@@ -127,9 +123,9 @@ export function About() {
             </div>
 
             {/* Handwritten Thought Box */}
-            <div className="p-4 rounded bg-paper-warm/70 border-l-2 border-accent text-sm font-sans text-ink-muted space-y-1">
+            <div className="p-4 rounded-xl bg-paper-warm/70 border-l-2 border-accent text-sm font-sans text-ink-muted space-y-1">
               <div className="font-mono text-xs uppercase font-bold text-accent">Personal Note on Growth:</div>
-              <p className="italic">
+              <p className="italic text-xs sm:text-sm">
                 "Real engineering growth happens when you debug a system failure at the kernel or network layer rather than relying on abstract high-level assumptions."
               </p>
             </div>

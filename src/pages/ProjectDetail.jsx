@@ -116,29 +116,31 @@ export function ProjectDetail() {
         {/* Case Study Sections */}
         <div className="space-y-10 sm:space-y-12">
           {/* Section: Overview */}
-          <section className="space-y-2.5">
+          <section className="space-y-3">
             <div className="flex items-center gap-2 pb-1 border-b border-grid text-xs font-mono text-ink-muted uppercase tracking-wider">
               <span className="w-2 h-2 bg-accent rounded-xs"></span>
               <span className="font-bold">01 // Architectural Overview</span>
             </div>
-            <p className="text-sm sm:text-base lg:text-lg text-ink-muted font-sans leading-relaxed">
-              {cs.overview}
-            </p>
+            <div className="notebook-ruled-sheet p-6 sm:p-7 rounded-xl">
+              <div className="notebook-ruled-content text-ink font-sans text-sm sm:text-base">
+                <p>{cs.overview}</p>
+              </div>
+            </div>
           </section>
 
           {/* Section: Problem Statement & Objectives */}
           <section className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-start">
-            <div className="p-5 sm:p-6 rounded bg-paper-light border border-grid shadow-xs">
-              <div className="text-xs font-mono text-accent font-bold uppercase mb-2 tracking-wider">
+            <div className="notebook-ruled-sheet p-5 sm:p-6 rounded-xl border border-grid shadow-xs">
+              <div className="text-xs font-mono text-accent font-bold uppercase mb-3 tracking-wider pb-2 border-b border-grid">
                 The Problem Statement
               </div>
-              <p className="text-xs sm:text-sm font-sans text-ink-muted leading-relaxed">
-                {cs.problemStatement}
-              </p>
+              <div className="notebook-ruled-content text-xs sm:text-sm font-sans text-ink-muted">
+                <p>{cs.problemStatement}</p>
+              </div>
             </div>
 
-            <div className="p-5 sm:p-6 rounded bg-paper-light border border-grid shadow-xs">
-              <div className="text-xs font-mono text-sage-dark font-bold uppercase mb-2 tracking-wider">
+            <div className="p-5 sm:p-6 rounded-xl bg-paper-light border border-grid shadow-xs">
+              <div className="text-xs font-mono text-sage-dark font-bold uppercase mb-3 tracking-wider pb-2 border-b border-grid">
                 Engineering Objectives
               </div>
               <ul className="space-y-2 text-xs sm:text-sm font-sans text-ink-muted">
@@ -162,9 +164,11 @@ export function ProjectDetail() {
               <span className="paper-stamp text-[10px]">ILLUSTRATIVE ENGINEERING SPEC</span>
             </div>
 
-            <p className="text-sm sm:text-base font-sans text-ink-muted leading-relaxed max-w-3xl">
-              {cs.systemArchitecture.description}
-            </p>
+            <div className="notebook-ruled-sheet p-5 sm:p-6 rounded-xl border border-grid shadow-xs max-w-4xl">
+              <div className="notebook-ruled-content text-sm sm:text-base font-sans text-ink">
+                <p>{cs.systemArchitecture.description}</p>
+              </div>
+            </div>
 
             {/* Architecture SVG Diagram with Proper Spacing */}
             <div className="pt-1">
@@ -251,16 +255,16 @@ export function ProjectDetail() {
           </section>
 
           {/* Section: Current Status & Transparent Disclaimer */}
-          <section className="p-5 sm:p-6 rounded bg-paper-warm/80 border border-grid space-y-2">
-            <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-mono text-ink-muted">
+          <section className="notebook-ruled-sheet p-5 sm:p-6 rounded-xl border border-grid shadow-xs space-y-3">
+            <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-mono text-ink-muted pb-2 border-b border-grid/60">
               <span className="font-bold text-ink uppercase">Current Status &amp; Integrity Disclaimer</span>
               <StatusBadge status={project.status} statusType={project.statusType} />
             </div>
-            <p className="text-xs sm:text-sm font-sans text-ink-muted leading-relaxed">
-              {cs.currentStatus}
-            </p>
+            <div className="notebook-ruled-content text-xs sm:text-sm font-sans text-ink-muted">
+              <p>{cs.currentStatus}</p>
+            </div>
             {cs.disclaimer && (
-              <p className="text-[11px] font-mono text-ink-faint italic pt-1 border-t border-grid/60">
+              <p className="text-[11px] font-mono text-ink-faint italic pt-2 border-t border-grid/60">
                 Note: {cs.disclaimer}
               </p>
             )}

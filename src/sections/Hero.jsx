@@ -122,7 +122,7 @@ export function Hero() {
 
           {/* Right Column: Handcrafted Engineering Technical Notebook Canvas */}
           <div className="lg:col-span-5 relative">
-            <div className="docket-card p-5 sm:p-7 bg-paper-light border border-grid-dark rounded-md relative shadow-paper-lg">
+            <div className="docket-card p-5 sm:p-7 bg-paper-light border border-grid-dark rounded-xl relative shadow-paper-lg overflow-hidden">
               {/* Paper Clip Visual Element */}
               <div className="absolute -top-3 right-6 sm:right-8 w-5 sm:w-6 h-10 sm:h-12 border-2 border-sage-dark/70 rounded-full pointer-events-none z-10" />
 

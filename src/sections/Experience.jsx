@@ -28,7 +28,7 @@ export function Experience() {
               </div>
 
               {/* Experience Docket Card */}
-              <div className="docket-card p-5 sm:p-8 bg-paper-light border border-grid-dark rounded-md relative shadow-paper">
+              <div className="docket-card p-5 sm:p-8 bg-paper-light border border-grid-dark rounded-xl relative shadow-paper overflow-hidden">
                 {/* Header: Role, Period, Location & Badge */}
                 <div className="flex flex-wrap items-start justify-between gap-3 pb-4 mb-5 border-b border-grid">
                   <div>
