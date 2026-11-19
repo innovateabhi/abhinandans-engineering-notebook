@@ -4,7 +4,7 @@ import { Layers, Database, Server, Cpu, ArrowRight, ArrowDown, Activity, Termina
 export function ArchitectureDiagram({ slug, title }) {
   if (slug === 'cloud-cost-optimizer') {
     return (
-      <div className="p-6 sm:p-8 lg:p-10 bg-paper-light border border-grid-dark rounded-2xl shadow-paper relative">
+      <div className="p-4 sm:p-8 lg:p-10 bg-paper-light border border-grid-dark rounded-2xl shadow-paper relative">
         <div className="flex flex-wrap items-center justify-between gap-3 pb-4 mb-6 sm:mb-8 border-b border-grid text-xs font-mono text-ink-muted">
           <div className="flex items-center gap-2">
             <Cpu className="w-4 h-4 text-accent shrink-0" />
@@ -83,7 +83,7 @@ export function ArchitectureDiagram({ slug, title }) {
 
   if (slug === 'restaurant-pos-saas') {
     return (
-      <div className="p-6 sm:p-8 lg:p-10 bg-paper-light border border-grid-dark rounded-2xl shadow-paper relative">
+      <div className="p-4 sm:p-8 lg:p-10 bg-paper-light border border-grid-dark rounded-2xl shadow-paper relative">
         <div className="flex flex-wrap items-center justify-between gap-3 pb-4 mb-6 sm:mb-8 border-b border-grid text-xs font-mono text-ink-muted">
           <div className="flex items-center gap-2">
             <Layers className="w-4 h-4 text-accent shrink-0" />
@@ -162,7 +162,7 @@ export function ArchitectureDiagram({ slug, title }) {
 
   if (slug === 'skilltwin') {
     return (
-      <div className="p-6 sm:p-8 lg:p-10 bg-paper-light border border-grid-dark rounded-2xl shadow-paper relative">
+      <div className="p-4 sm:p-8 lg:p-10 bg-paper-light border border-grid-dark rounded-2xl shadow-paper relative">
         <div className="flex flex-wrap items-center justify-between gap-3 pb-4 mb-6 sm:mb-8 border-b border-grid text-xs font-mono text-ink-muted">
           <div className="flex items-center gap-2">
             <Activity className="w-4 h-4 text-accent shrink-0" />
@@ -224,7 +224,7 @@ export function ArchitectureDiagram({ slug, title }) {
 
   if (slug === 'linux-system-monitoring') {
     return (
-      <div className="p-6 sm:p-8 lg:p-10 bg-paper-light border border-grid-dark rounded-2xl shadow-paper relative">
+      <div className="p-4 sm:p-8 lg:p-10 bg-paper-light border border-grid-dark rounded-2xl shadow-paper relative">
         <div className="flex flex-wrap items-center justify-between gap-3 pb-4 mb-6 sm:mb-8 border-b border-grid text-xs font-mono text-ink-muted">
           <div className="flex items-center gap-2">
             <Terminal className="w-4 h-4 text-accent shrink-0" />
@@ -299,7 +299,7 @@ export function ArchitectureDiagram({ slug, title }) {
 
   // Default for lab projects (business automation, enterprise erp)
   return (
-    <div className="p-6 sm:p-8 lg:p-10 bg-paper-light border border-grid-dark rounded-2xl shadow-paper relative">
+    <div className="p-4 sm:p-8 lg:p-10 bg-paper-light border border-grid-dark rounded-2xl shadow-paper relative">
       <div className="flex flex-wrap items-center justify-between gap-3 pb-4 mb-6 sm:mb-8 border-b border-grid text-xs font-mono text-ink-muted">
         <div className="flex items-center gap-2">
           <Layers className="w-4 h-4 text-accent shrink-0" />

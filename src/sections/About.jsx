@@ -18,7 +18,7 @@ export function About() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
           {/* Main Story Narrative */}
           <div className="lg:col-span-7 space-y-7">
-            <div className="notebook-ruled-sheet p-6 sm:p-8 lg:p-9 relative">
+            <div className="notebook-ruled-sheet p-4 sm:p-8 lg:p-9 relative">
               {/* Notebook Entry Docket Header */}
               <div className="flex flex-wrap items-center justify-between gap-2 pb-3 mb-5 border-b border-grid text-xs font-mono text-ink-muted">
                 <div className="flex items-center gap-2">

@@ -93,10 +93,10 @@ export function Hero() {
             </div>
 
             {/* Hero CTAs */}
-            <div className="pt-3 flex flex-wrap items-center gap-3">
+            <div className="pt-3 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto">
               <button
                 onClick={scrollToProjects}
-                className="inline-flex items-center gap-2 px-4 py-3 sm:px-5 sm:py-3.5 rounded bg-ink hover:bg-ink-light text-paper font-mono text-xs font-semibold tracking-wider transition-all shadow-paper active:translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-ink"
+                className="inline-flex items-center justify-center gap-2 px-4 py-3 sm:px-5 sm:py-3.5 rounded bg-ink hover:bg-ink-light text-paper font-mono text-xs font-semibold tracking-wider transition-all shadow-paper active:translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-ink w-full sm:w-auto"
               >
                 <BookOpen className="w-4 h-4 text-accent" />
                 <span>EXPLORE PROJECTS</span>
@@ -106,7 +106,7 @@ export function Hero() {
               <a
                 href={profile.resumePdfUrl}
                 download={profile.resumeFilename}
-                className="inline-flex items-center gap-2 px-4 py-3 sm:px-5 sm:py-3.5 rounded bg-paper-secondary hover:bg-paper-warm border border-accent/60 text-ink font-mono text-xs font-semibold tracking-wider transition-all shadow-xs active:translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-accent"
+                className="inline-flex items-center justify-center gap-2 px-4 py-3 sm:px-5 sm:py-3.5 rounded bg-paper-secondary hover:bg-paper-warm border border-accent/60 text-ink font-mono text-xs font-semibold tracking-wider transition-all shadow-xs active:translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-accent w-full sm:w-auto"
               >
                 <FileDown className="w-4 h-4 text-accent" />
                 <span>DOWNLOAD RESUME (PDF)</span>
