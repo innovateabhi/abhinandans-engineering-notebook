@@ -79,15 +79,17 @@ export function NotebookHeader() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
-          {/* Monogram / Brand Identity */}
+          {/* Monogram / Brand Identity with actual Favicon Logo */}
           <Link
             to="/"
             className="flex items-center gap-2.5 sm:gap-3 group focus:outline-none"
             onClick={() => isHomePage && window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
-            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded border border-sage-dark/50 bg-paper-secondary flex items-center justify-center font-mono font-bold text-xs sm:text-sm text-ink group-hover:border-accent group-hover:text-accent transition-colors shadow-xs">
-              AR
-            </div>
+            <img
+              src="/favicon.svg"
+              alt="Abhinandan's Engineering Notebook Logo"
+              className="w-8 h-8 sm:w-10 sm:h-10 rounded border border-sage-dark/50 bg-paper-secondary object-contain shadow-xs group-hover:border-accent transition-colors"
+            />
             <div className="flex flex-col">
               <span className="font-editorial text-sm sm:text-lg font-semibold tracking-tight text-ink group-hover:text-accent transition-colors leading-tight">
                 Abhinandan Roy

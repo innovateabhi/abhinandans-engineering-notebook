@@ -14,9 +14,11 @@ export function NotebookFooter() {
           {/* Col 1: Identity & Colophon */}
           <div className="md:col-span-5 space-y-3">
             <div className="flex items-center gap-2.5">
-              <div className="w-7 h-7 rounded border border-sage-dark/60 bg-paper-secondary flex items-center justify-center font-mono font-bold text-xs text-ink">
-                AR
-              </div>
+              <img
+                src="/favicon.svg"
+                alt="Abhinandan's Engineering Notebook Logo"
+                className="w-7 h-7 sm:w-8 sm:h-8 rounded border border-sage-dark/60 bg-paper-secondary object-contain shadow-xs"
+              />
               <span className="font-editorial text-base sm:text-lg font-semibold text-ink">
                 The Engineering Notebook
               </span>

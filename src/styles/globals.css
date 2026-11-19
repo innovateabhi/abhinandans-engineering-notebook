@@ -41,6 +41,15 @@
     min-width: 320px;
   }
 
+  button, 
+  [role="button"], 
+  a, 
+  input[type="submit"], 
+  input[type="button"], 
+  .cursor-pointer {
+    cursor: pointer !important;
+  }
+
   ::selection {
     background-color: rgba(197, 117, 80, 0.22);
     color: #26382F;
