@@ -1,64 +1,64 @@
 import React from 'react';
 import { SectionHeader } from '../components/ui/SectionHeader';
 import { experiences } from '../data/experience';
-import { ExternalLink, Calendar, MapPin, CheckCircle2, Award, Briefcase } from 'lucide-react';
+import { ExternalLink, Calendar, MapPin, CheckCircle2, Briefcase } from 'lucide-react';
 
 export function Experience() {
   return (
-    <section id="experience" className="py-20 border-t border-grid/70 relative">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="experience" className="py-16 sm:py-24 border-t border-grid/70 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
           chapter="CHAPTER 005 // FROM INTERN TO FOUNDER"
-          title="Professional timeline &amp; engineering responsibilities."
+          title="Professional timeline &amp; engineering journey."
           subtitle="From executing kernel-level monitoring during a certified Linux industrial internship at Webel to architecting software products as the founder of Softrenix Technologies."
           handwrittenNote="theory applied in the field"
           pageNumber="05"
         />
 
         {/* Timeline Layout */}
-        <div className="space-y-10 relative">
-          {/* Vertical connecting line */}
+        <div className="space-y-8 sm:space-y-10 relative">
+          {/* Vertical connecting line (desktop) */}
           <div className="hidden md:block absolute top-6 bottom-6 left-8 w-[1.5px] bg-grid-dark" />
 
           {experiences.map((exp, index) => (
             <div key={exp.id} className="relative md:pl-20">
-              {/* Timeline marker icon */}
+              {/* Timeline marker icon (desktop) */}
               <div className="hidden md:flex absolute top-6 left-5 -translate-x-1/2 w-8 h-8 rounded-full border-2 border-accent bg-paper items-center justify-center text-accent shadow-xs z-10">
                 <Briefcase className="w-4 h-4" />
               </div>
 
               {/* Experience Docket Card */}
-              <div className="docket-card p-6 sm:p-8 bg-paper-light border border-grid-dark rounded-md relative shadow-paper">
+              <div className="docket-card p-5 sm:p-8 bg-paper-light border border-grid-dark rounded-md relative shadow-paper">
                 {/* Header: Role, Period, Location & Badge */}
-                <div className="flex flex-wrap items-start justify-between gap-4 pb-4 mb-5 border-b border-grid">
+                <div className="flex flex-wrap items-start justify-between gap-3 pb-4 mb-5 border-b border-grid">
                   <div>
                     <div className="flex items-center gap-2 mb-1">
-                      <span className="text-xs font-mono font-bold text-accent tracking-wider uppercase">
+                      <span className="text-[11px] sm:text-xs font-mono font-bold text-accent tracking-wider uppercase">
                         ENTRY // 0{index + 1}
                       </span>
                       <span className="text-grid-dark">•</span>
-                      <span className="text-xs font-mono text-ink-muted">{exp.type}</span>
+                      <span className="text-[11px] sm:text-xs font-mono text-ink-muted">{exp.type}</span>
                     </div>
 
-                    <h3 className="font-editorial text-2xl sm:text-3xl font-semibold text-ink leading-snug">
+                    <h3 className="font-editorial text-xl sm:text-3xl font-semibold text-ink leading-snug">
                       {exp.role}
                     </h3>
 
-                    <div className="flex flex-wrap items-center gap-3 mt-1.5 text-xs font-mono text-ink-muted">
+                    <div className="flex flex-wrap items-center gap-2 sm:gap-3 mt-1.5 text-xs font-mono text-ink-muted">
                       <span className="font-bold text-ink">{exp.organization}</span>
                       <span>•</span>
                       <span className="flex items-center gap-1">
-                        <MapPin className="w-3.5 h-3.5 text-accent" /> {exp.location}
+                        <MapPin className="w-3.5 h-3.5 text-accent shrink-0" /> {exp.location}
                       </span>
                       <span>•</span>
                       <span className="flex items-center gap-1">
-                        <Calendar className="w-3.5 h-3.5 text-sage-dark" /> {exp.period}
+                        <Calendar className="w-3.5 h-3.5 text-sage-dark shrink-0" /> {exp.period}
                       </span>
                     </div>
                   </div>
 
-                  <div className="flex flex-col items-end gap-2">
-                    <span className="paper-stamp">
+                  <div className="flex flex-wrap items-center sm:flex-col sm:items-end gap-2">
+                    <span className="paper-stamp text-[10px]">
                       {exp.badge}
                     </span>
 
@@ -79,7 +79,7 @@ export function Experience() {
                 </div>
 
                 {/* Summary */}
-                <p className="text-sm sm:text-base font-sans text-ink-muted leading-relaxed mb-5">
+                <p className="text-xs sm:text-base font-sans text-ink-muted leading-relaxed mb-5">
                   {exp.summary}
                 </p>
 
@@ -99,20 +99,20 @@ export function Experience() {
                 </div>
 
                 {/* Applied Technologies Footer */}
-                <div className="pt-4 border-t border-grid flex flex-wrap items-center justify-between gap-3 text-xs font-mono">
-                  <div className="flex flex-wrap items-center gap-1.5">
-                    <span className="text-ink-faint mr-1">Stack:</span>
+                <div className="pt-4 border-t border-grid flex flex-wrap items-center justify-between gap-2.5 text-xs font-mono">
+                  <div className="flex flex-wrap items-center gap-1">
+                    <span className="text-ink-faint mr-1 text-[11px]">Stack:</span>
                     {exp.technologies.map((t) => (
                       <span
                         key={t}
-                        className="px-2 py-0.5 rounded bg-paper-secondary border border-grid/60 text-ink-muted"
+                        className="px-2 py-0.5 rounded bg-paper-secondary border border-grid/60 text-ink-muted text-[11px]"
                       >
                         {t}
                       </span>
                     ))}
                   </div>
 
-                  <span className="text-ink-faint">RECORD VERIFIED</span>
+                  <span className="text-ink-faint text-[10px]">RECORD VERIFIED</span>
                 </div>
               </div>
             </div>

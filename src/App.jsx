@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { NotebookHeader } from './components/notebook/NotebookHeader';
 import { NotebookFooter } from './components/notebook/NotebookFooter';
 import { NotebookEffects } from './components/animations/NotebookEffects';
+import { BackToTop } from './components/ui/BackToTop';
 import { Home } from './pages/Home';
 import { ProjectDetail } from './pages/ProjectDetail';
 import { NotFound } from './pages/NotFound';
@@ -24,6 +25,7 @@ export default function App() {
     <BrowserRouter>
       <ScrollToTopOnRoute />
       <NotebookEffects />
+      <BackToTop />
       <div className="min-h-screen flex flex-col bg-paper text-ink font-sans selection:bg-accent/20">
         <NotebookHeader />
         <div className="flex-1">

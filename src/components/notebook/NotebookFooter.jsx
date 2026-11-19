@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Github, Linkedin, ArrowUp, ShieldCheck, Heart } from 'lucide-react';
+import { Mail, Github, Linkedin, ArrowUp, ShieldCheck } from 'lucide-react';
 import { profile } from '../../data/profile';
 
 export function NotebookFooter() {
@@ -8,23 +8,23 @@ export function NotebookFooter() {
   };
 
   return (
-    <footer className="mt-20 border-t border-grid bg-paper-warm/40 relative">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <footer className="mt-16 sm:mt-24 border-t border-grid bg-paper-warm/40 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
           {/* Col 1: Identity & Colophon */}
           <div className="md:col-span-5 space-y-3">
-            <div className="flex items-center gap-2">
-              <div className="w-7 h-7 rounded border border-sage/60 bg-paper-secondary flex items-center justify-center font-mono font-bold text-xs text-ink">
+            <div className="flex items-center gap-2.5">
+              <div className="w-7 h-7 rounded border border-sage-dark/60 bg-paper-secondary flex items-center justify-center font-mono font-bold text-xs text-ink">
                 AR
               </div>
-              <span className="font-editorial text-lg font-semibold text-ink">
+              <span className="font-editorial text-base sm:text-lg font-semibold text-ink">
                 The Engineering Notebook
               </span>
             </div>
             <p className="text-xs text-ink-muted leading-relaxed font-sans max-w-sm">
               Handcrafted digital engineering journal documenting real-world systems, cloud infrastructure, full-stack prototypes, and DevOps experiments by Abhinandan Roy.
             </p>
-            <div className="flex items-center gap-2 text-[11px] font-mono text-ink-faint">
+            <div className="flex flex-wrap items-center gap-2 text-[10px] sm:text-[11px] font-mono text-ink-faint">
               <span>B.Tech CSE (2024–2028)</span>
               <span>•</span>
               <span>Dev Bhoomi Uttarakhand University</span>
@@ -42,9 +42,9 @@ export function NotebookFooter() {
                 className="flex items-center gap-2 text-ink hover:text-accent transition-colors"
                 title="Primary direct contact"
               >
-                <Mail className="w-3.5 h-3.5 text-accent" />
-                <span>{profile.email}</span>
-                <span className="text-[10px] text-accent uppercase font-bold">(Direct)</span>
+                <Mail className="w-3.5 h-3.5 text-accent shrink-0" />
+                <span className="break-all">{profile.email}</span>
+                <span className="text-[10px] text-accent uppercase font-bold shrink-0">(Direct)</span>
               </a>
               <a
                 href={profile.github}
@@ -52,8 +52,8 @@ export function NotebookFooter() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-ink-muted hover:text-ink transition-colors"
               >
-                <Github className="w-3.5 h-3.5" />
-                <span>github.com/innovateabhi</span>
+                <Github className="w-3.5 h-3.5 shrink-0" />
+                <span className="break-all">github.com/innovateabhi</span>
               </a>
               <a
                 href={profile.linkedin}
@@ -61,8 +61,8 @@ export function NotebookFooter() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-ink-muted hover:text-ink transition-colors"
               >
-                <Linkedin className="w-3.5 h-3.5" />
-                <span>linkedin.com/in/abhinandan-roy-28a1b6328</span>
+                <Linkedin className="w-3.5 h-3.5 shrink-0" />
+                <span className="break-all">linkedin.com/in/abhinandan-roy-28a1b6328</span>
               </a>
             </div>
           </div>
@@ -78,7 +78,7 @@ export function NotebookFooter() {
               <ArrowUp className="w-3.5 h-3.5" />
             </button>
 
-            <div className="text-[11px] font-mono text-ink-faint md:text-right space-y-1">
+            <div className="text-[10px] sm:text-[11px] font-mono text-ink-faint md:text-right space-y-0.5">
               <div>DESIGN TOKENS // FRAUNCES + DM SANS</div>
               <div>COMPILED FOR VERCEL &amp; STATIC CLOUD</div>
             </div>
@@ -86,9 +86,9 @@ export function NotebookFooter() {
         </div>
 
         {/* Bottom Bar: Privacy & Legal */}
-        <div className="mt-8 pt-6 border-t border-grid/60 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs font-mono text-ink-muted">
+        <div className="mt-8 pt-5 border-t border-grid/60 flex flex-col sm:flex-row items-center justify-between gap-2.5 text-[11px] sm:text-xs font-mono text-ink-muted">
           <div className="flex items-center gap-1.5">
-            <ShieldCheck className="w-4 h-4 text-sage-dark" />
+            <ShieldCheck className="w-3.5 h-3.5 text-sage-dark shrink-0" />
             <span>Strict Privacy Compliant • Verified Academic &amp; Industrial Records</span>
           </div>
           <div>

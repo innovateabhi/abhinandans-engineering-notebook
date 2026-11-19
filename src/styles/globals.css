@@ -16,42 +16,50 @@
   --color-sage-dark: #4C6150;
   --color-accent: #C57550;
   --color-grid: #D8D8CC;
-  --color-margin-red: rgba(217, 119, 104, 0.45);
-  --color-margin-sage: rgba(105, 129, 109, 0.35);
+  --color-margin-red: rgba(217, 119, 104, 0.4);
+  --color-margin-sage: rgba(105, 129, 109, 0.3);
 }
 
 @layer base {
+  * {
+    border-color: #D8D8CC;
+  }
+
   html {
     background-color: var(--color-paper);
     color: var(--color-ink);
     font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   body {
     overflow-x: hidden;
     position: relative;
     background-color: var(--color-paper);
+    min-width: 320px;
   }
 
   ::selection {
-    background-color: rgba(197, 117, 80, 0.25);
+    background-color: rgba(197, 117, 80, 0.22);
     color: #26382F;
   }
 
-  /* Custom scrollbar matching notebook theme */
+  /* Bespoke Notebook Scrollbar */
   ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
+    width: 7px;
+    height: 7px;
   }
 
   ::-webkit-scrollbar-track {
-    background: #F1EDE0;
+    background: #EFECE1;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #A6B4A8;
+    background: #B9C4BC;
     border-radius: 4px;
-    border: 2px solid #F1EDE0;
+    border: 2px solid #EFECE1;
   }
 
   ::-webkit-scrollbar-thumb:hover {
@@ -59,45 +67,49 @@
   }
 }
 
-/* Notebook paper texture patterns */
+/* Subtle Bespoke Paper Noise Texture */
+.paper-grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.025'/%3E%3C/svg%3E");
+}
+
+/* Graph paper texture patterns */
 .bg-notebook-grid {
   background-color: var(--color-paper);
   background-image: 
-    linear-gradient(to right, rgba(216, 216, 204, 0.35) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(216, 216, 204, 0.35) 1px, transparent 1px);
+    linear-gradient(to right, rgba(216, 216, 204, 0.4) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(216, 216, 204, 0.4) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
 .bg-notebook-grid-dense {
-  background-color: var(--color-paper);
+  background-color: var(--color-paper-light);
   background-image: 
     linear-gradient(to right, rgba(216, 216, 204, 0.5) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(216, 216, 204, 0.5) 1px, transparent 1px);
   background-size: 16px 16px;
 }
 
-.bg-notebook-isometric {
-  background-color: var(--color-paper-light);
-  background-image: 
-    radial-gradient(circle, rgba(105, 129, 109, 0.25) 1px, transparent 1px);
-  background-size: 20px 20px;
-}
-
-/* Notebook Ruled Line and Margins */
-.notebook-page {
-  position: relative;
-  background-color: var(--color-paper);
-}
-
+/* Notebook Ruled Margin Guide (authentic dual red line) */
 .notebook-margin-guide {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 3rem;
+  left: 2.75rem;
   width: 1px;
   background-color: var(--color-margin-red);
   pointer-events: none;
   z-index: 1;
+}
+
+.notebook-margin-guide::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 4px;
+  width: 1px;
+  background-color: var(--color-margin-red);
+  opacity: 0.5;
 }
 
 @media (min-width: 1024px) {
@@ -106,71 +118,85 @@
   }
 }
 
-/* Perforated paper border effect */
-.perforated-edge-top {
-  background-image: radial-gradient(circle at 10px 0, transparent 6px, #FCFAF4 6px);
-  background-size: 20px 10px;
-  background-repeat: repeat-x;
-}
-
-.perforated-edge-left {
-  background-image: radial-gradient(circle at 0 12px, transparent 5px, #F6F3E9 5px);
-  background-size: 10px 24px;
-  background-repeat: repeat-y;
-}
-
-/* Paper Stamp effect */
+/* Authentic Paper Stamp effect */
 .paper-stamp {
   display: inline-flex;
   align-items: center;
-  gap: 0.375rem;
-  padding: 0.25rem 0.625rem;
+  gap: 0.35rem;
+  padding: 0.25rem 0.6rem;
   font-family: 'JetBrains Mono', monospace;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  border: 1.5px dashed var(--color-sage);
-  border-radius: 4px;
-  background-color: rgba(221, 229, 222, 0.5);
-  color: var(--color-ink);
+  border: 1.5px dashed var(--color-sage-dark);
+  border-radius: 3px;
+  background-color: rgba(221, 229, 222, 0.6);
+  color: #26382F;
   transform: rotate(-1deg);
+  box-shadow: inset 0 0 0 1px rgba(105, 129, 109, 0.1);
 }
 
 .paper-stamp-accent {
   border-color: var(--color-accent);
-  background-color: rgba(247, 231, 222, 0.6);
-  color: #A65A37;
-  transform: rotate(1deg);
+  background-color: rgba(247, 231, 222, 0.65);
+  color: #9C4E2D;
+  transform: rotate(0.8deg);
 }
 
 .paper-stamp-verified {
-  border-color: #4C6150;
-  background-color: rgba(105, 129, 109, 0.15);
-  color: #26382F;
+  border-color: #385040;
+  background-color: rgba(105, 129, 109, 0.2);
+  color: #1F2E26;
+  transform: rotate(-0.5deg);
 }
 
-/* Washi Tape effect */
-.washi-tape {
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  transform: translateX(-50%) rotate(-1deg);
-  width: 110px;
-  height: 22px;
-  background: rgba(220, 215, 195, 0.7);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+/* Washi Tape Accent */
+.washi-tape-strip {
+  width: 90px;
+  height: 18px;
+  background: rgba(222, 218, 198, 0.75);
+  box-shadow: 0 1px 3px rgba(38, 56, 47, 0.08);
   backdrop-filter: blur(1px);
-  border-left: 2px dashed rgba(180, 175, 155, 0.5);
-  border-right: 2px dashed rgba(180, 175, 155, 0.5);
-  z-index: 10;
-  pointer-events: none;
+  border-left: 2px dashed rgba(180, 175, 155, 0.6);
+  border-right: 2px dashed rgba(180, 175, 155, 0.6);
+  transform: rotate(-1.5deg);
 }
 
-.washi-tape-sage {
-  background: rgba(169, 192, 173, 0.65);
+/* Bespoke Docket Card */
+.docket-card {
+  position: relative;
+  background-color: var(--color-paper-light);
+  border: 1px solid var(--color-grid);
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(38, 56, 47, 0.04), 0 1px 2px rgba(38, 56, 47, 0.03);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.28s ease;
 }
 
-.washi-tape-accent {
-  background: rgba(225, 175, 150, 0.6);
+.docket-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-sage);
+  box-shadow: 0 12px 28px rgba(38, 56, 47, 0.09), 0 3px 8px rgba(38, 56, 47, 0.05);
+}
+
+/* Blueprint / System Architecture Box */
+.blueprint-box {
+  background-color: #F8FAF6;
+  border: 1px dashed var(--color-sage);
+  border-radius: 6px;
+  position: relative;
+}
+
+.blueprint-box::before {
+  content: 'ARCH-DIAGRAM // SYS-SPEC';
+  position: absolute;
+  top: -9px;
+  left: 14px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  background-color: #F8FAF6;
+  padding: 0 6px;
+  color: var(--color-sage-dark);
+  font-weight: 700;
 }
