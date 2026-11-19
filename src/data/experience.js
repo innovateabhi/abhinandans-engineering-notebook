@@ -9,8 +9,8 @@ export const experiences = [
     id: "exp-02",
     role: "Founder & Software Developer",
     organization: "Softrenix Technologies",
-    location: "Kolkata / Remote",
-    period: "Oct 2026 - Present",
+    location: "Remote",
+    period: "June 2026 - Present",
     type: "Entrepreneurial & Engineering Initiative",
     badge: "FOUNDER & DEV",
     companyUrl: "https://www.softrenix.com", // Shown strictly within this experience card only
