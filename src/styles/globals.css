@@ -76,18 +76,67 @@
   }
 }
 
-/* AUTHENTIC PLAIN HORIZONTAL LINED NOTEBOOK PAPER (Deeper, defined lines matching reference) */
+/* AUTHENTIC PLAIN HORIZONTAL LINED NOTEBOOK PAPER (Refined, lighter ruling matching tactile notebook paper) */
 .bg-notebook-grid,
 .bg-notebook-lined {
   background-color: var(--color-paper);
-  background-image: linear-gradient(to bottom, rgba(182, 182, 165, 0.65) 1.2px, transparent 1.2px);
+  background-image: linear-gradient(to bottom, rgba(182, 182, 165, 0.32) 1px, transparent 1px);
   background-size: 100% 34px;
 }
 
 .bg-notebook-lined-dense {
   background-color: var(--color-paper-light);
-  background-image: linear-gradient(to bottom, rgba(182, 182, 165, 0.7) 1.2px, transparent 1.2px);
+  background-image: linear-gradient(to bottom, rgba(182, 182, 165, 0.35) 1px, transparent 1px);
   background-size: 100% 28px;
+}
+
+/* Notebook Ruled Sheet with Exact Line-by-Line Baseline Alignment */
+.notebook-ruled-sheet {
+  background-color: var(--color-paper-light);
+  border: 1px solid var(--color-grid);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(38, 56, 47, 0.05);
+  position: relative;
+}
+
+.notebook-ruled-content {
+  font-size: 0.9375rem; /* 15px */
+  line-height: 34px !important;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 33px,
+    rgba(182, 182, 165, 0.32) 33px,
+    rgba(182, 182, 165, 0.32) 34px
+  );
+  background-size: 100% 34px;
+  background-position: 0 27px;
+}
+
+.notebook-ruled-content p {
+  margin: 0;
+  margin-bottom: 34px;
+  line-height: 34px !important;
+}
+
+@media (min-width: 640px) {
+  .notebook-ruled-content {
+    font-size: 1rem; /* 16px */
+    line-height: 36px !important;
+    background-image: repeating-linear-gradient(
+      to bottom,
+      transparent 0px,
+      transparent 35px,
+      rgba(182, 182, 165, 0.32) 35px,
+      rgba(182, 182, 165, 0.32) 36px
+    );
+    background-size: 100% 36px;
+    background-position: 0 28px;
+  }
+  .notebook-ruled-content p {
+    margin-bottom: 36px;
+    line-height: 36px !important;
+  }
 }
 
 /* Notebook Ruled Left Margin Guide (authentic dual red line like lined notebooks) */

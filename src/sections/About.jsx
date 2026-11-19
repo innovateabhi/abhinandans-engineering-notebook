@@ -17,26 +17,42 @@ export function About() {
         {/* Editorial Layout: Story & Systems Philosophy */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
           {/* Main Story Narrative */}
-          <div className="lg:col-span-7 space-y-6 text-base sm:text-lg text-ink-muted leading-relaxed font-sans">
-            <div className="p-6 rounded-md bg-paper-light border border-grid shadow-xs">
-              <p className="font-editorial text-xl sm:text-2xl text-ink leading-snug mb-3">
+          <div className="lg:col-span-7 space-y-6">
+            <div className="notebook-ruled-sheet p-6 sm:p-8 lg:p-9 relative overflow-hidden">
+              {/* Notebook Entry Docket Header */}
+              <div className="flex flex-wrap items-center justify-between gap-2 pb-3 mb-5 border-b border-grid text-xs font-mono text-ink-muted">
+                <div className="flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-xs bg-accent"></span>
+                  <span className="font-bold text-ink uppercase tracking-wider text-xs">
+                    ENTRY 02 // PERSONAL ARCHIVE &amp; SYSTEMS INQUIRY
+                  </span>
+                </div>
+                <span className="paper-stamp text-[10px]">DEHRADUN // 2026</span>
+              </div>
+
+              {/* Editorial Opening Thought */}
+              <p className="font-editorial text-lg sm:text-2xl text-ink leading-snug mb-6 italic">
                 "Understanding software means looking past the surface framework to examine the underlying mechanisms."
               </p>
-              <p className="text-sm sm:text-base text-ink-muted">
-                I'm currently pursuing my B.Tech in Computer Science &amp; Engineering at Dev Bhoomi Uttarakhand University, Dehradun (Class of 2028). My interest in computing extends well beyond writing frontend code or copying templates — I am driven by understanding how entire systems work together: how HTTP requests traverse reverse proxies, how Linux kernels expose hardware telemetry through virtual filesystems, and how cloud infrastructure scales predictably.
-              </p>
+
+              {/* Exact Line-by-Line Notebook Ruled Text */}
+              <div className="notebook-ruled-content text-ink-muted font-sans">
+                <p>
+                  I'm currently pursuing my B.Tech in Computer Science &amp; Engineering at Dev Bhoomi Uttarakhand University, Dehradun (Class of 2028). My interest in computing extends well beyond writing frontend code or copying templates — I am driven by understanding how entire systems work together: how HTTP requests traverse reverse proxies, how Linux kernels expose hardware telemetry through virtual filesystems, and how cloud infrastructure scales predictably.
+                </p>
+
+                <p>
+                  Alongside my academic studies, I completed an intensive certified 40-hour technical internship at Webel (West Bengal Electronics Industry Development Corporation Limited) in Kolkata, where I developed a Linux system monitoring web application and gained hands-on expertise with server deployment, systemd, and firewall configurations.
+                </p>
+
+                <p>
+                  To apply these principles directly to real-world software, I founded <strong>Softrenix Technologies</strong>. Through this initiative, I build custom software prototypes, multi-tenant SaaS architectures, and automated business workflows. Every project in this notebook represents a deliberate engineering inquiry: exploring cost intelligence in AWS, managing high-throughput transactions in restaurant POS systems, or designing event-driven automation pipelines.
+                </p>
+              </div>
             </div>
 
-            <p className="text-sm sm:text-base">
-              Alongside my academic studies, I completed an intensive certified 40-hour technical internship at Webel (West Bengal Electronics Industry Development Corporation Limited) in Kolkata, where I developed a Linux system monitoring web application and gained hands-on expertise with server deployment, systemd, and firewall configurations.
-            </p>
-
-            <p className="text-sm sm:text-base">
-              To apply these principles directly to real-world software, I founded <strong>Softrenix Technologies</strong>. Through this initiative, I build custom software prototypes, multi-tenant SaaS architectures, and automated business workflows. Every project in this notebook represents a deliberate engineering inquiry: exploring cost intelligence in AWS, managing high-throughput transactions in restaurant POS systems, or designing event-driven automation pipelines.
-            </p>
-
             {/* Philosophy Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
               <div className="p-4 rounded bg-paper-warm/60 border border-grid">
                 <div className="flex items-center gap-2 text-ink font-mono text-xs font-bold mb-1">
                   <Compass className="w-4 h-4 text-accent" />
