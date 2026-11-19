@@ -5,6 +5,7 @@
 
 export const profile = {
   name: "Abhinandan Roy",
+  notebookTitle: "Abhinandan's Engineering Notebook",
   eyebrow: "CHAPTER 001 // INTRODUCTION",
   headline: "Hey, I'm Abhinandan.",
   secondaryHeadline: "I build things, break things, and figure out how they work.",

@@ -20,7 +20,7 @@ export function NotebookFooter() {
                 className="w-7 h-7 sm:w-8 sm:h-8 rounded border border-sage-dark/60 bg-paper-secondary object-contain shadow-xs"
               />
               <span className="font-editorial text-base sm:text-lg font-semibold text-ink">
-                The Engineering Notebook
+                Abhinandan's Engineering Notebook
               </span>
             </div>
             <p className="text-xs text-ink-muted leading-relaxed font-sans max-w-sm">
