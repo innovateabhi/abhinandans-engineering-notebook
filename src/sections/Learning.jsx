@@ -27,7 +27,7 @@ export function Learning() {
                   <span className="font-bold text-accent flex items-center gap-1.5">
                     <GraduationCap className="w-4 h-4 text-accent shrink-0" /> ACADEMIC SCHOLARSHIP
                   </span>
-                  <span>2024 — 2028</span>
+                  <span>2024 - 2028</span>
                 </div>
 
                 {education.map((edu, i) => (

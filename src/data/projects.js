@@ -7,12 +7,12 @@ export const projects = [
   {
     id: "01",
     slug: "cloud-cost-optimizer",
-    title: "Cloud Cost Optimizer — SaaS Platform",
+    title: "Cloud Cost Optimizer: SaaS Platform",
     subtitle: "AWS Resource Discovery, Cost Intelligence & Multi-Agent Optimization",
     category: "Cloud Engineering / SaaS / AI",
     status: "In Development",
     statusType: "dev", // 'dev' | 'internship' | 'lab'
-    timeline: "2026 — Ongoing",
+    timeline: "2026 - Ongoing",
     techStack: ["Python", "AWS (EC2, S3, CloudWatch)", "PostgreSQL", "FastAPI", "Boto3"],
     shortDescription: "A SaaS-oriented cloud cost optimization platform focused on AWS resource discovery, infrastructure utilization analysis, cost intelligence, and multi-agent optimization recommendations.",
     notebookNote: "Focusing on identifying underutilized EC2 instances and idle EBS volumes through real-time metric streams.",
@@ -77,7 +77,7 @@ export const projects = [
     category: "Full-Stack SaaS / Restaurant Technology",
     status: "In Development",
     statusType: "dev",
-    timeline: "2026 — Ongoing",
+    timeline: "2026 - Ongoing",
     techStack: ["React", "Vite", "Tailwind CSS", "Python", "MySQL", "VPS / Cloud Hosting"],
     shortDescription: "A restaurant management SaaS combining POS billing, QR-based food ordering, table management, order workflows, and staff operations.",
     notebookNote: "Designing dual-facing workflows: rapid counter POS billing for cashiers alongside contactless QR ordering for dine-in guests.",
@@ -137,12 +137,12 @@ export const projects = [
   {
     id: "03",
     slug: "skilltwin",
-    title: "SkillTwin — Skills & Competency Platform",
+    title: "SkillTwin: Skills & Competency Platform",
     subtitle: "Competency Mapping, Assessment Workflows & Role-Oriented Gap Analysis",
     category: "Skills Intelligence / Full-Stack Development",
     status: "In Development",
     statusType: "dev",
-    timeline: "2026 — Ongoing",
+    timeline: "2026 - Ongoing",
     techStack: ["React", "Python / FastAPI", "PostgreSQL", "Tailwind CSS"],
     shortDescription: "A skills and competency platform focused on assessments, skills mapping, gap analysis, and role-oriented interfaces.",
     notebookNote: "Investigating radar/spider graph representations of skill proficiencies against organizational competency benchmarks.",
@@ -267,7 +267,7 @@ export const projects = [
     title: "Business Automation & Workflow Orchestration",
     subtitle: "Event-Driven Integration Architecture & Automated Lead-to-Fulfillment Pipelines",
     category: "Automation / Integration Engineering",
-    status: "Planned — Engineering Lab",
+    status: "Planned: Engineering Lab",
     statusType: "lab",
     timeline: "Engineering Lab Roadmap",
     techStack: ["n8n", "Webhooks", "REST APIs", "Node.js / Python", "PostgreSQL"],
@@ -315,7 +315,7 @@ export const projects = [
         "Analyzing how event-driven automation can eliminate manual operational debt in tech businesses."
       ],
 
-      currentStatus: "Planned — Active in the Engineering Lab. Architectural designs and prototype webhook recipes are undergoing sandbox validation.",
+      currentStatus: "Planned: Active in the Engineering Lab. Architectural designs and prototype webhook recipes are undergoing sandbox validation.",
       isLive: false,
       disclaimer: "This project is currently in the architectural research and lab prototyping stage. No production claims are made."
     }
@@ -327,7 +327,7 @@ export const projects = [
     title: "Enterprise Resource Planning (ERP) Platform",
     subtitle: "Modular Architecture for Inventory, Procurement, Permissions & Audit Logging",
     category: "Enterprise Software / Full-Stack Architecture",
-    status: "Planned — Engineering Lab",
+    status: "Planned: Engineering Lab",
     statusType: "lab",
     timeline: "Engineering Lab Roadmap",
     techStack: ["React", "Python", "PostgreSQL", "Tailwind CSS", "Redis"],
@@ -375,7 +375,7 @@ export const projects = [
         "Deepening knowledge of ACID transactional semantics and append-only audit architecture."
       ],
 
-      currentStatus: "Planned — Active in the Engineering Lab. Data models, architecture documents, and schema specifications are in development.",
+      currentStatus: "Planned: Active in the Engineering Lab. Data models, architecture documents, and schema specifications are in development.",
       isLive: false,
       disclaimer: "Architectural blueprint and engineering lab initiative. Presented transparently as a future roadmap project."
     }

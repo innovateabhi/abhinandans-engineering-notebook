@@ -304,7 +304,7 @@ export function ArchitectureDiagram({ slug, title }) {
         <div className="flex items-center gap-2">
           <Layers className="w-4 h-4 text-accent shrink-0" />
           <span className="font-bold text-accent uppercase tracking-wider text-xs sm:text-sm">
-            {title.toUpperCase()} — LAB ROADMAP SPECIFICATION
+            {title.toUpperCase()} // LAB ROADMAP SPECIFICATION
           </span>
         </div>
         <span className="paper-stamp-accent text-[10px]">PLANNED // LAB ROADMAP</span>

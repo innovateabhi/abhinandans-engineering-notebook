@@ -10,7 +10,7 @@ export const experiences = [
     role: "Founder & Software Developer",
     organization: "Softrenix Technologies",
     location: "Kolkata / Remote",
-    period: "Oct 2026 — Present",
+    period: "Oct 2026 - Present",
     type: "Entrepreneurial & Engineering Initiative",
     badge: "FOUNDER & DEV",
     companyUrl: "https://www.softrenix.com", // Shown strictly within this experience card only
@@ -28,7 +28,7 @@ export const experiences = [
     role: "Technical Intern",
     organization: "West Bengal Electronics Industry Development Corporation Ltd. (Webel)",
     location: "Salt Lake, Kolkata, India",
-    period: "01 Jul 2026 — 04 Aug 2026",
+    period: "01 Jul 2026 - 04 Aug 2026",
     type: "Certified Industrial Internship",
     badge: "40 HOURS CERTIFIED",
     summary: "Completed a certified 40-hour industrial training internship focused on practical Linux system engineering, server deployment, firewall security, and custom monitoring application development.",

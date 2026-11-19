@@ -80,7 +80,7 @@ export function Contact() {
         <SectionHeader
           chapter="CHAPTER 007 // LET'S CONNECT"
           title="Every good project starts with a conversation."
-          subtitle="Whether you're reaching out for software engineering roles, cloud &amp; DevOps hiring, freelance system architecture, or technical internships — submit a docket below or write directly."
+          subtitle="Whether you're reaching out for software engineering roles, cloud &amp; DevOps hiring, freelance system architecture, or technical internships, submit a docket below or write directly."
           handwrittenNote="inbox open for engineering inquiries"
           pageNumber="07"
         />
@@ -235,7 +235,7 @@ export function Contact() {
                       name="subject"
                       value={formData.subject}
                       onChange={handleChange}
-                      placeholder="e.g. Full-Stack / Cloud Role Opening — Summer 2026"
+                      placeholder="e.g. Full-Stack / Cloud Role Opening (Summer 2026)"
                       className="w-full px-3.5 py-2.5 rounded-lg bg-paper border border-grid text-ink font-sans text-xs sm:text-sm placeholder:text-ink-faint focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all"
                     />
                   </div>
@@ -267,10 +267,6 @@ export function Contact() {
                       <Send className="w-4 h-4 shrink-0" />
                       <span>{status === 'submitting' ? 'PROCESSING TRANSMISSION...' : 'TRANSMIT INQUIRY'}</span>
                     </button>
-
-                    <span className="text-[10px] font-mono text-ink-faint">
-                      Frontend static • Formspree / Web3Forms ready
-                    </span>
                   </div>
                 </form>
               )}

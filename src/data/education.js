@@ -9,7 +9,7 @@ export const education = [
     field: "Computer Science & Engineering",
     institution: "Dev Bhoomi Uttarakhand University",
     location: "Dehradun, Uttarakhand, India",
-    period: "2024 — 2028",
+    period: "2024 - 2028",
     status: "Undergraduate (In Progress)",
     description: "Rigorous undergraduate engineering program covering core computing fundamentals, algorithmic analysis, systems architecture, distributed computing, and software development methodologies.",
     keyDomains: [

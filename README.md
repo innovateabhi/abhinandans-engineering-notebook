@@ -1,4 +1,4 @@
-# The Engineering Notebook — Abhinandan Roy
+# The Engineering Notebook -  Abhinandan Roy
 > **Personal Engineering Portfolio & Technical Journal**  
 > *Software Engineering | Full-Stack Development | Cloud & DevOps*
 
@@ -20,19 +20,19 @@ Inspired by the tactile warmth of handcrafted engineering journals, this portfol
 
 ## 📑 Chapter Structure
 
-1. **Chapter 01 — Hello, World! / Introduction**: Hero journal page, personal introduction, core credentials, and interactive terminal telemetry.
-2. **Chapter 02 — The Human Behind the Code**: Systems philosophy, academic journey at Dev Bhoomi Uttarakhand University (Class of 2028), and first-principles engineering mindset.
-3. **Chapter 03 — Things I've Built**: 6 substantial engineering projects with dynamic case studies:
-   - `01. Cloud Cost Optimizer — SaaS Platform` (In Development)
-   - `02. Restaurant POS & QR Food Ordering SaaS` (In Development)
-   - `03. SkillTwin — Skills & Competency Platform` (In Development)
-   - `04. Linux Advanced System Monitoring` (Webel Internship Verified)
-   - `05. Business Automation & Workflow Orchestration` (Planned — Engineering Lab)
-   - `06. Enterprise Resource Planning (ERP) Platform` (Planned — Engineering Lab)
-4. **Chapter 04 — My Engineering Toolkit**: Categorized technical skills (Languages, Frontend, Backend, Databases, Cloud AWS, DevOps, Automation) grounded in verified codebase applications.
-5. **Chapter 05 — From Intern to Founder**: Professional timeline covering the certified 40-hour Webel internship (Salt Lake, Kolkata) and founding **Softrenix Technologies**.
-6. **Chapter 06 — The Learning Curve**: B.Tech CSE education, 4 verified certifications (Microsoft SC-900, Red Hat Linux Fundamentals, Acmegrade, CodSoft), and 4 "Notes in Progress" drafts.
-7. **Chapter 07 — Let's Connect**: Direct communication desk with prominent **Write Me an Email** CTA (`office.abhinandan@gmail.com`), copy email utility, and verified external profiles.
+1. **Chapter 01 -  Hello, World! / Introduction**: Hero journal page, personal introduction, core credentials, and interactive terminal telemetry.
+2. **Chapter 02 -  The Human Behind the Code**: Systems philosophy, academic journey at Dev Bhoomi Uttarakhand University (Class of 2028), and first-principles engineering mindset.
+3. **Chapter 03 -  Things I've Built**: 6 substantial engineering projects with dynamic case studies:
+  - `01. Cloud Cost Optimizer -  SaaS Platform` (In Development)
+  - `02. Restaurant POS & QR Food Ordering SaaS` (In Development)
+  - `03. SkillTwin -  Skills & Competency Platform` (In Development)
+  - `04. Linux Advanced System Monitoring` (Webel Internship Verified)
+  - `05. Business Automation & Workflow Orchestration` (Planned -  Engineering Lab)
+  - `06. Enterprise Resource Planning (ERP) Platform` (Planned -  Engineering Lab)
+4. **Chapter 04 -  My Engineering Toolkit**: Categorized technical skills (Languages, Frontend, Backend, Databases, Cloud AWS, DevOps, Automation) grounded in verified codebase applications.
+5. **Chapter 05 -  From Intern to Founder**: Professional timeline covering the certified 40-hour Webel internship (Salt Lake, Kolkata) and founding **Softrenix Technologies**.
+6. **Chapter 06 -  The Learning Curve**: B.Tech CSE education, 4 verified certifications (Microsoft SC-900, Red Hat Linux Fundamentals, Acmegrade, CodSoft), and 4 "Notes in Progress" drafts.
+7. **Chapter 07 -  Let's Connect**: Direct communication desk with prominent **Write Me an Email** CTA (`office.abhinandan@gmail.com`), copy email utility, and verified external profiles.
 
 ---
 
@@ -171,4 +171,4 @@ npm run preview
 - **LinkedIn**: [linkedin.com/in/abhinandan-roy-28a1b6328](https://www.linkedin.com/in/abhinandan-roy-28a1b6328/)
 
 ---
-*The Engineering Notebook — Handcrafted with precision and curiosity.*
+*The Engineering Notebook -  Handcrafted with precision and curiosity.*
